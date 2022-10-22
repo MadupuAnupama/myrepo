@@ -1,4 +1,4 @@
-# webapp-orderbird
+# Hosting web application using fargate
 
 ### project:
 
