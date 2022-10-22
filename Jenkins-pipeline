@@ -3,8 +3,8 @@ pipeline {
     environment {
         AWS_ACCOUNT_ID="621304841877"
         AWS_DEFAULT_REGION="us-east-1" 
-        IMAGE_REPO_NAME="sirishecr"
-        IMAGE_TAG="sirishimage"
+        IMAGE_REPO_NAME="anupamarepo"
+        IMAGE_TAG="anupamaimage"
         REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
     }
    
@@ -21,7 +21,7 @@ pipeline {
         
         stage('Cloning Git') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', url: ' https://github.com/sirishrayaprolu/webapp-orderbird.git']]]) 
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/MadupuAnupama/myrepo.git']]]) 
             }
         }
   
